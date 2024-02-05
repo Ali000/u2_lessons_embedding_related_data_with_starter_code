@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 // You'll be creating this controller module next
 const moviesCtrl = require('../controllers/movies');
+const reviewsCtrl = require("../controllers/reviews");
 	
 // GET /movies
 router.get('/', moviesCtrl.index);
@@ -11,5 +12,6 @@ router.get('/new', moviesCtrl.new);
 router.get('/:id', moviesCtrl.show);
 // POST /movies
 router.post('/', moviesCtrl.create);
+
 	
 module.exports = router;
